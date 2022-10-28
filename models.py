@@ -195,7 +195,6 @@ class GATConv(nn.Module):
             return rst
 
 
-# GAT model
 class GAT(nn.Module):
     def __init__(
             self,
