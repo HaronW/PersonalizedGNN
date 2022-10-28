@@ -6,7 +6,7 @@ PersonalizedGNN is a graph neural network model that can predict the possible ca
 
 ## Run
 
-install requirements
+### Step.1 install requirements
 
 ```shell
 pip install -r requirements.txt
@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 
 
-construct dataset
+### Step.2 construct dataset
 
 ```shell
 python ./constuct_single_dataset.py
@@ -22,7 +22,7 @@ python ./constuct_single_dataset.py
 
 
 
-train
+### Step.3 train
 
 ```shell
 python -u ./gat.py --gpu=0 --dataset='BRCA/' --filecode=1
@@ -30,7 +30,7 @@ python -u ./gat.py --gpu=0 --dataset='BRCA/' --filecode=1
 
 
 
-process results
+### Step.4 process results
 
 ```shell
 python ./process_result.py
