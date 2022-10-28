@@ -272,7 +272,7 @@ def main():
     argparser.add_argument("--cpu", action="store_true", help="CPU mode. This option overrides --gpu.")
     argparser.add_argument("--gpu", type=int, default=0, help="GPU device ID.")
     argparser.add_argument("--n-runs", type=int, help="running times", default=5)
-    argparser.add_argument("--n-epochs", type=int, help="number of epochs", default=200)
+    argparser.add_argument("--n-epochs", type=int, help="number of epochs", default=2000)
 
     argparser.add_argument("--use-labels", type=str2bool, default=False)
     argparser.add_argument("--n-label-iters", type=int, help="number of label iterations", default=0)
@@ -382,7 +382,7 @@ def main():
     pred_mx = np.array(pred_mx)
 
     log_file.write("Runned {} times\n".format(args.n_runs))
-    pd.DataFrame(pred_mx).to_csv("./PersonalizedGNN/mxlog/{}_{}_PGNN.csv".format(args.dataset[:-1],
+    pd.DataFrame(pred_mx).to_csv("./PersonalizedGNN/mxlog/{}_{}.csv".format(args.dataset[:-1],
                                                                                               args.filecode))
 
 
