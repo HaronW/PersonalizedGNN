@@ -2,6 +2,10 @@
 
 PersonalizedGNN is a graph neural network model that can predict the possible cancer driver genes.
 
+- Please setup your own path.
+- The following process are used to learn and rank one dataset (one patient).
+- PersonalizedGNN takes about 25 mins to learn and rank one dataset on a computer with AMD Ryzen 5800x, NVIDIA RTX 3080Ti.
+
 
 
 ## Run
@@ -46,13 +50,13 @@ python ./process_result.py
 | models.py                   | PersonalizedGNN model                       |
 | utils.py                    | tools for PersonalizedGNN                   |
 | construct_single_network.py | generate Paired-SSN dataset                 |
-| process_result.py           | process raw train result, rank and evaluate |
+| process_result.py           | process train result, rank and evaluate     |
 
 
 
 ## Performance
 
-We use the average precision of top 30 genes as measurement and tested our model on BRCA, LUSC, and LUAD cancer datasets.
+We use the average precision of top 30 genes as measurement and tested our model on BRCA, LUSC, and LUAD cancer datasets (all the patients).
 
 | dataset name                | precision                                   |
 | --------------------------- | ------------------------------------------- |
@@ -64,14 +68,13 @@ We use the average precision of top 30 genes as measurement and tested our model
 
 ## Requirements
 
-dgl == 0.8.0.post1
-h5py == 3.4.0
-numpy == 1.21.2
-pandas == 1.3.3
-scikit_learn == 1.0.2
-scipy == 1.7.1
-torch == 1.10.0+cu102
-tqdm == 4.62.3
+dgl-cuda11.1>=0.7.0
+numpy>=1.21.2
+pandas>=1.3.3
+scikit_learn>=0.24.2
+scipy>=1.7.1
+torch>=1.10.0+cu102
+tqdm>=4.62.3
 
 see `requirments.txt`
 
