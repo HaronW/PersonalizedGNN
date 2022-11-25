@@ -4,7 +4,8 @@ PersonalizedGNN is a graph neural network model that can predict the possible ca
 
 - Please setup your own path.
 - The following process are used to learn and rank one dataset (one patient).
-- PersonalizedGNN takes about 25 mins to learn and rank one dataset on a computer with AMD Ryzen 5800x, NVIDIA RTX 3080Ti.
+- For multiple datasets, you should repeat Step.2 ~ Step.3 on each dataset and use the function multi_dataset() in process_result.py to integrate the results.
+- PersonalizedGNN takes about 20 mins to learn and rank one dataset on a computer with NVIDIA RTX 3090.
 
 
 
