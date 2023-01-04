@@ -41,7 +41,9 @@ python -u ./gat.py --gpu=0 --dataset='BRCA/' --filecode=1
 python ./process_result.py
 ```
 
-
+## Quick Start
+ 
+ Use well-established dataset "LUSC_1.mat" (adjacency matrix and feature) and "LUSC_1.txt" (label) in "/data_sample" to train a model and rank the genes of one patient. This quick start skips Step 2.
 
 ## Files
 
